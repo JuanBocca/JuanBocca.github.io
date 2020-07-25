@@ -160,6 +160,7 @@ input[type='email'] {
   padding-left: 2%;
   background-color: #202327;
   border: none;
+  border-radius: 8px;
   border-bottom: 1px solid #000;
   min-width: 280px;
   box-sizing: border-box;
@@ -180,6 +181,7 @@ textarea {
   padding-left: 2%;
   background-color: #202327;
   border: none;
+  border-radius: 8px;
   border-bottom: 1px solid #000;
   resize: none;
   min-width: 280px;
@@ -195,41 +197,39 @@ label {
   opacity: 0.8;
   font-weight: 400;
 }
-.floating-label {
-  position: relative;
-  margin-bottom: 10px;
+.kw-floating-label-wrapper {
+  margin-bottom: 10px !important;
 }
-.floating-label label {
-  color: #fff;
-  position: absolute;
-  top: 15px;
-  left: 2%;
-  opacity: 0;
-  transition: all 0.3s ease;
+.kw-floating-label-wrapper .kw-floating-label {
+  top: 5px !important;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out !important;
 }
-.floating-label input:not(:placeholder-shown),
-.floating-label textarea:not(:placeholder-shown) {
-  padding: 28px 0px 12px 0px;
-  padding-left: 1%;
+.kw-floating-label-wrapper .kw-floating-label.is-active {
+  transform: translateY(-3px) !important;
+  opacity: 0.7 !important;
 }
-.floating-label input:not(:placeholder-shown) + label,
-.floating-label textarea:not(:placeholder-shown) + label {
-  transform: translateY(-15px);
-  opacity: 0.7;
+.kw-floating-label-wrapper .kw-floating-label.is-active:before {
+  display: none !important;
+}
+.kw-floating-label-wrapper .kw-floating-label.is-focused {
+  color: #4D90FE;
 }
 input[type='submit'] {
   width: 100%;
+  height: 50px;
   padding-top: 5px;
   padding-bottom: 4px;
-  font-family: 'Karma';
-  font-weight: bold;
+  font-weight: 600;
   font-size: 20px;
   color: #fff;
-  background-color: #5a5e64;
+  background-color: #262b30;
   cursor: pointer;
-  border: 0.5px solid #ccc;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s linear;
 }
 input[type='submit']:hover {
-  color: #000;
-  background-color: #ccc;
+  border: 0.5px solid #000;
+  background-color: #202327;
 }
