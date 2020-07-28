@@ -11,13 +11,37 @@ window.addEventListener('load', function (e) {
   var toggle = document.querySelector('.hamburger');
   var nav = document.querySelector('.nav');
 
-  var media = window.matchMedia('(min-width: 665px)');
-  media.addListener(function () {
-    if (media.matches) {
+  var mediaS = window.matchMedia('(max-width: 664px)');
+  var mediaB = window.matchMedia('(min-width: 665px)');
+  var li = document.querySelector('ul');
+
+  if (mediaS.matches) {
+    li.addEventListener('click', function (e) {
+      toggle.classList.toggle('is-active');
+      nav.classList.toggle('mobile-nav');
+    });
+  }
+
+  if (mediaB.matches) {
+    li.removeEventListener('click', function () {
+      toggle.classList.toggle('is-active');
+      nav.classList.toggle('mobile-nav');
+    })
+    nav.classList.remove('mobile-nav');
+    toggle.classList.remove('is-active');
+  }
+
+  window.addEventListener('resize', function (e) {
+    if (mediaB.matches) {
+      console.log('grande');
+      li.removeEventListener('click', function () {
+        e.preventDefault();
+        toggle.classList.toggle('is-active');
+        nav.classList.toggle('mobile-nav');
+      })
       nav.classList.remove('mobile-nav');
       toggle.classList.remove('is-active');
     } else {
-      var li = document.querySelector('ul');
       li.addEventListener('click', function (e) {
         toggle.classList.toggle('is-active');
         nav.classList.toggle('mobile-nav');
