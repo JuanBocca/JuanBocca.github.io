@@ -16,6 +16,12 @@ window.addEventListener('load', function (e) {
     if (media.matches) {
       nav.classList.remove('mobile-nav');
       toggle.classList.remove('is-active');
+    } else {
+      var li = document.querySelector('ul');
+      li.addEventListener('click', function (e) {
+        toggle.classList.toggle('is-active');
+        nav.classList.toggle('mobile-nav');
+      });
     }
   });
 
@@ -24,5 +30,4 @@ window.addEventListener('load', function (e) {
     this.classList.toggle('is-active');
     nav.classList.toggle('mobile-nav');
   });
-
 });

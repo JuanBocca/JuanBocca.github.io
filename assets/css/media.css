@@ -1,0 +1,45 @@
+@media (min-width: 665px) {
+    .sub {
+      font-size: 20px !important;
+      letter-spacing: 6px !important;
+    }
+    .section {
+      padding: 50px 80px !important;
+    }
+    header {
+      padding: 40px 5% !important;
+    }
+    header.sticky {
+      padding: 20px 3.5% !important;
+    }
+    .hamburger {
+      visibility: hidden !important;
+    }
+    .nav {
+      display: flex !important;
+    }
+  }
+  @media (min-width: 765px) {
+    header {
+      padding: 40px 10% !important;
+    }
+    header.sticky {
+      padding: 20px 8.5% !important;
+    }
+  }
+  @media (min-width: 980px) {
+    header {
+      padding: 40px 15% !important;
+    }
+    header.sticky {
+      padding: 20px 13.5% !important;
+    }
+  }
+  @media (min-width: 1180px) {
+    header {
+      padding: 40px 20% !important;
+    }
+    header.sticky {
+      padding: 20px 18.5% !important;
+    }
+  }

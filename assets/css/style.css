@@ -1,48 +1,4 @@
-@media (min-width: 665px) {
-  .sub {
-    font-size: 20px !important;
-    letter-spacing: 6px !important;
-  }
-  .section {
-    padding: 50px 80px !important;
-  }
-  header {
-    padding: 40px 5% !important;
-  }
-  header.sticky {
-    padding: 20px 3.5% !important;
-  }
-  .hamburger {
-    visibility: hidden !important;
-  }
-  .nav {
-    display: flex !important;
-  }
-}
-@media (min-width: 765px) {
-  header {
-    padding: 40px 10% !important;
-  }
-  header.sticky {
-    padding: 20px 8.5% !important;
-  }
-}
-@media (min-width: 980px) {
-  header {
-    padding: 40px 15% !important;
-  }
-  header.sticky {
-    padding: 20px 13.5% !important;
-  }
-}
-@media (min-width: 1180px) {
-  header {
-    padding: 40px 20% !important;
-  }
-  header.sticky {
-    padding: 20px 18.5% !important;
-  }
-}
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -56,55 +12,10 @@ body {
   font-weight: 400;
   line-height: 1.8em;
   color: #666;
-}
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  top: 50%;
-  left: 50%;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 51px;
-  height: 51px;
-  margin: 6px;
-  border: 6px solid #fff;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-#spinner-wrapper {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1021;
-  display: block;
+  scroll-behavior: smooth;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -151,6 +62,7 @@ header ul li a {
   transition: 0.5s;
 }
 
+/* NAV */
 .nav {
   display: none;
 }
@@ -183,99 +95,7 @@ header ul li a {
   background-color: #ccc;
 }
 
-.hamburger {
-  visibility: visible;
-  font:inherit;
-  display:inline-block;
-  overflow:visible;
-  margin:0;
-  padding:15px;
-  cursor:pointer;
-  transition-timing-function:linear;
-  transition-duration:.15s;
-  transition-property:opacity,filter;
-  text-transform:none;
-  color:inherit;
-  border:0;
-  background-color:transparent;
-  z-index: 3;
- }
- .hamburger.is-active:hover,
- .hamburger:hover {
-  opacity:.7
- }
- .hamburger.is-active .hamburger-inner,
- .hamburger.is-active .hamburger-inner:after,
- .hamburger.is-active .hamburger-inner:before {
-  background-color:#000
- }
- .hamburger-box {
-  position:relative;
-  display:inline-block;
-  width:40px;
-  height:24px
- }
- .hamburger-inner {
-  top:50%;
-  display:block;
-  margin-top:-2px
- }
- .hamburger-inner,
- .hamburger-inner:after,
- .hamburger-inner:before {
-  position:absolute;
-  width:40px;
-  height:4px;
-  transition-timing-function:ease;
-  transition-duration:.15s;
-  transition-property:transform;
-  border-radius:4px;
-  background-color:#000
- }
- .hamburger-inner:after,
- .hamburger-inner:before {
-  display:block;
-  content:""
- }
- .hamburger-inner:before {
-  top:-10px
- }
- .hamburger-inner:after {
-  bottom:-10px
- }
-.hamburger--emphatic {
-  overflow:hidden
- }
- .hamburger--emphatic .hamburger-inner {
-  transition:background-color .125s ease-in .175s
- }
- .hamburger--emphatic .hamburger-inner:before {
-  left:0;
-  transition:transform .125s cubic-bezier(.6,.04,.98,.335),top .05s linear .125s,left .125s ease-in .175s
- }
- .hamburger--emphatic .hamburger-inner:after {
-  top:10px;
-  right:0;
-  transition:transform .125s cubic-bezier(.6,.04,.98,.335),top .05s linear .125s,right .125s ease-in .175s
- }
- .hamburger--emphatic.is-active .hamburger-inner {
-  transition-delay:0s;
-  transition-timing-function:ease-out;
-  background-color:transparent!important
- }
- .hamburger--emphatic.is-active .hamburger-inner:before {
-  top:-80px;
-  left:-80px;
-  transition:left .125s ease-out,top .05s linear .125s,transform .125s cubic-bezier(.075,.82,.165,1) .175s;
-  transform:translate3d(80px,80px,0) rotate(45deg)
- }
- .hamburger--emphatic.is-active .hamburger-inner:after {
-  top:-80px;
-  right:-80px;
-  transition:right .125s ease-out,top .05s linear .125s,transform .125s cubic-bezier(.075,.82,.165,1) .175s;
-  transform:translate3d(-80px,80px,0) rotate(-45deg)
- }
-
+/* IMAGES */
 .img {
   position: relative;
   opacity: 0.7;
@@ -302,9 +122,13 @@ header ul li a {
   min-height: 400px;
 }
 
+/* SECTION */
 .section {
   text-align: center;
   padding: 20px;
+}
+.section > * {
+  margin: 20px 0px;
 }
 .section-light {
   background-color: #f4f4f4;
@@ -315,9 +139,10 @@ header ul li a {
   color: #ddd;
 }
 
+/* SKILLS GRID */
 .grid {
   max-width: 1200px;
-  margin: auto;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: space-evenly;
@@ -326,6 +151,52 @@ header ul li a {
   display: flex;
   flex-direction: column;
 }
+/* SKILLS BARS */
+.container-bars {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: #aaa;
+  margin: 8px 0px;
+}
+.bar-fill {
+  background-color: #1a5538;
+  height: 20px;
+}
+.percentage {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  top: -24px;
+  right: 5px;
+  font-weight: 550;
+  color: #000;
+}
+.html {width: 90%;}
+.css {width: 90%;}
+.bootstrap {width: 70%;}
+.javascript {width: 80%;}
+.jquery {width: 75%;}
+.angular {width: 50%;}
+.php {width: 85%;}
+.mysql {width: 80%;}
+.skill-label {
+  background-color: #318058;
+  width: 90px;
+  height: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* IMAGES TEXT */
 .text {
   position: absolute;
   top: 50%;
@@ -357,6 +228,7 @@ header ul li a {
   color: #111 !important;
 }
 
+/* FORM */
 .form {
   max-width: 800px;
   margin: auto;
