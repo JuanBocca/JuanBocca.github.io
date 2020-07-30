@@ -228,6 +228,61 @@ header ul li a {
   color: #111 !important;
 }
 
+/* PORTFOLIO CARDS - GENERAL*/
+.card {
+  margin: 5px;
+  position: relative;
+  text-decoration: none;
+  padding: 80px 0px;
+  font-size: 25px;
+  overflow: hidden;
+}
+.card:before {
+  content: '';
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  filter: blur(8px);
+  transition: ease-in-out 300ms;
+}
+.card:hover:before {
+  filter: blur(2px);
+}
+.card span {
+  position: relative;
+  padding: 5px 10px;
+  z-index: 1;
+}
+.card span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #666;
+  opacity: 0.3;
+  transition: linear 100ms;
+}
+.card:hover span:before {
+  opacity: 0.5;
+}
+/* CARD PROJECTS */
+#clock:before {
+  background-color: #282e34;
+  background-image: url('../img/project/clock.jpg');
+}
+#clock span {
+  color: #fff;
+}
+
 /* FORM */
 .form {
   max-width: 800px;
