@@ -166,22 +166,23 @@
     <div class="kwes-form">
       <form class="form" action="https://kwes.io/api/foreign/forms/Me3Pkq8Uv25XAs2wgU78" method="POST">
         <div class="kw-floating-label-wrapper">
-          <input type="text" name="name" placeholder="Your name" />
+          <input type="text" name="name" placeholder="Your name" rules="regex:/^[+A-Z+a-z+À-ÿ ]*$/|min:3|required" />
           <label for="name">Name</label>
         </div>
 
         <div class="kw-floating-label-wrapper">
-          <input type="text" name="subject" placeholder="The subject" />
+          <input type="text" name="subject" placeholder="The subject" rules="string|min:3|required" />
           <label for="subject">Subject</label>
         </div>
 
         <div class="kw-floating-label-wrapper">
-          <input type="email" name="email" placeholder="Your email" />
+          <input type="email" name="email" placeholder="Your email" rules="email|required" />
           <label for="email">Email</label>
         </div>
 
         <div class="kw-floating-label-wrapper">
-          <textarea name="message" cols="50" rows="10" placeholder="Type your message"></textarea>
+          <textarea name="message" cols="50" rows="10" placeholder="Type your message"
+            rules="string|required"></textarea>
           <label for="message">Your message</label><br />
         </div>
         <input type="submit" value="Send!" id="send" />
