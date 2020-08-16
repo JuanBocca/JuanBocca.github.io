@@ -182,8 +182,8 @@ header ul li a {
 }
 .html {width: 90%;}
 .css {width: 90%;}
-.bootstrap {width: 70%;}
-.javascript {width: 80%;}
+.bootstrap {width: 75%;}
+.javascript {width: 85%;}
 .jquery {width: 75%;}
 .angular {width: 50%;}
 .php {width: 85%;}
@@ -237,8 +237,11 @@ header ul li a {
   position: relative;
   text-decoration: none;
   padding: 80px 0px;
+  padding-bottom: 20px;
   font-size: 25px;
   overflow: hidden;
+  box-shadow: 0 4px 5px -1px #808080;
+  cursor: context-menu;
 }
 .card:before {
   content: '';
@@ -246,6 +249,7 @@ header ul li a {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  max-height: 188.8px;
   top: 0;
   left: 0;
   right: 0;
@@ -276,6 +280,27 @@ header ul li a {
 }
 .card:hover span:before {
   opacity: 0.5;
+}
+.cardDesc {
+  margin-top: 95px;
+}
+.desc {
+  font-size: 15px;
+}
+.descText {
+  display: block;
+  margin-bottom: 10px;
+}
+.descText a {
+  text-decoration: none;
+  color: #000;
+}
+.links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.links a img {
+  cursor: pointer;
 }
 /* CARD PROJECTS */
 #clock:before {
