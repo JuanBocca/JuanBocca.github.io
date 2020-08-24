@@ -320,6 +320,13 @@ header ul li a {
 #emercado span {
   color: #fff;
 }
+#touristSites:before {
+  background-color: rgb(192, 192, 192);
+  background-image: url('../img/project/map.jpg');
+}
+#touristSites span {
+  color: #fff;
+}
 
 /* FORM */
 .form {
