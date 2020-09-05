@@ -327,6 +327,16 @@ header ul li a {
 #touristSites span {
   color: #fff;
 }
+#faceRecognition:before {
+  background-color: rgb(141, 141, 141);
+  background-image: url('../img/project/face.jpg');
+}
+#faceRecognition span:before {
+  background-color: #333;
+}
+#faceRecognition span {
+  color: #fff;
+}
 
 /* FORM */
 .form {
